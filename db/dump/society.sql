@@ -1,4 +1,3 @@
-drop database IF EXISTS society;
 create database society;
 
 use society;
