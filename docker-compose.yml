@@ -1,3 +1,5 @@
+# Plus d'information sur la mise en place et l'utilisation de ce fichier de configuration :
+# - https://medium.com/@agusmahari/docker-how-to-install-postgresql-using-docker-compose-d646c793f216
 services:
   postgres:
     # Nom du conteneur qui sera créé

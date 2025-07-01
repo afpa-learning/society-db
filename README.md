@@ -1,28 +1,33 @@
-# Base de données d'apprentissage
+# Base de données "society"
 
-Ce dépôt contient la correction des exercices portant sur la base de données "society" utilisée en formation à l'Afpa.
+Ce dépôt contient les exercices de requêtage portant sur la base de données "society" utilisée en formation à l'Afpa.
 
 Vous y retrouverez :
 - les fichiers de configuration Docker ;
 - les scripts de création de base de données (plusieurs branches sont disponibles suivant le SBGDR souhaité) ;
-- les solutions aux exercices de requêtage.
+- les énoncés PDF des exercices dans le sous-dossier `./todo`
 
+Compétences abordées :
+- mise en place d'une base de données en utilisant Docker ;
+- requêtage d'une base de données avec restriction ;
+- requêtage avec jointure ;
+- utilisation de fonctions d'agrégation.
 
 ## Déploiement de la base de données Docker
 
-Pour déployer la base de données en local, exécutez la commande suivante :
+Le fichier "docker-compose.yml" va permettre d'instancier un conteneur Postgres accessible via le réseau local :
+
+![Représentation de l'accès au conteneur Postgres à partir de locahost](postgres-container.svg)
+
+Pour instancier le container, exécuter la commande suivante :
 ```bash
 docker compose -d
 ```
+Veillez à faire attention au **conflits de ports** (notamment avec les services pré-installés en local) et modifiez la redirection de port en fonction.
 
-Veillez à faire attention au conflits de ports.
-Modifiez la redirection de port en fonction.
+## Acccès à la BDD
 
-## Acccès à la BDD "society"
-
-Connexion via phpMyAdmin : [http://localhost:8080/index.php](http://localhost:8080/index.php)
-
-Utilisateur : **app_user**
+Utilisateur super admin (attention !) : **postgres**
 Mot de passe : **supersecured**
 
 Vous pouvez également vous connecter en utilisant un client de BDD tel que :
